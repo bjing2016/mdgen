@@ -23,8 +23,8 @@ pip install matplotlib==3.7.2 numpy==1.21.2
 1. Download the tetrapeptide MD datasets:
 ```
 mkdir -p data/4AA_sims data/4AA_sims_implicit
-gsutil rsync -r gs://mdgen/4AA_sims data/4AA_sims
-gsutil rsync -r gs://mdgen/4AA_sims_implicit data/4AA_sims_implicit
+gsutil -m rsync -r gs://mdgen-public/4AA_sims data/4AA_sims
+gsutil -m rsync -r gs://mdgen-public/4AA_sims_implicit data/4AA_sims_implicit
 ```
 2. Download the ATLAS simulations via https://github.com/bjing2016/alphaflow/blob/master/scripts/download_atlas.sh to `data/atlas_sims`.
 3. Preprocess the tetrapeptide simulations
@@ -68,11 +68,11 @@ python train.py --sim_condition --train_split splits/atlas_train.csv --val_split
 
 The model weights used in the paper may be downloaded here:
 ```
-wget https://storage.googleapis.com/mdgen/weights/forward_sim.ckpt
-wget https://storage.googleapis.com/mdgen/weights/interpolation.ckpt
-wget https://storage.googleapis.com/mdgen/weights/upsampling.ckpt
-wget https://storage.googleapis.com/mdgen/weights/inpainting.ckpt
-wget https://storage.googleapis.com/mdgen/weights/atlas.ckpt
+wget https://storage.googleapis.com/mdgen-public/weights/forward_sim.ckpt
+wget https://storage.googleapis.com/mdgen-public/weights/interpolation.ckpt
+wget https://storage.googleapis.com/mdgen-public/weights/upsampling.ckpt
+wget https://storage.googleapis.com/mdgen-public/weights/inpainting.ckpt
+wget https://storage.googleapis.com/mdgen-public/weights/atlas.ckpt
 ```
 
 ## Inference
@@ -121,3 +121,16 @@ Tables and figures in the paper are extracted from these pickle files.
 ## License
 
 MIT. Additional licenses may apply for third-party source code noted in file headers.
+
+## Citation
+```
+@misc{jing2024generativemodelingmoleculardynamics,
+      title={Generative Modeling of Molecular Dynamics Trajectories}, 
+      author={Bowen Jing and Hannes Stärk and Tommi Jaakkola and Bonnie Berger},
+      year={2024},
+      eprint={2409.17808},
+      archivePrefix={arXiv},
+      primaryClass={q-bio.BM},
+      url={https://arxiv.org/abs/2409.17808}, 
+}
+```
