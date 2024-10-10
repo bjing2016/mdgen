@@ -1,6 +1,6 @@
 # MDGen
 
-Implementation of [Generative Modeling of Molecular Dynamics Trajectories]() by Bowen Jing*, Hannes Stark*, Tommi Jaakkola, and Bonnie Berger.
+Implementation of [Generative Modeling of Molecular Dynamics Trajectories](https://arxiv.org/abs/2409.17808) by Bowen Jing*, Hannes Stark*, Tommi Jaakkola, and Bonnie Berger.
 
 We introduce generative modeling of molecular trajectories as a paradigm for learning flexible multi-task surrogate models of MD from data. By conditioning on appropriately chosen frames of the trajectory, such generative models can be adapted to diverse tasks such as forward simulation, transition path sampling, and trajectory upsampling. By alternatively conditioning on part of the molecular system and inpainting the rest, we also demonstrate the first steps towards dynamics-conditioned molecular design. We validate these capabilities on tetrapeptide simulations and show initial steps towards learning trajectories of protein monomers. Methodological details and further evaluations can be found in the paper. Please feel free to reach out to us at bjing@mit.edu, hstark@mit.edu with any questions.
 
