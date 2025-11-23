@@ -26,8 +26,7 @@ mkdir -p data/4AA_sims data/4AA_sims_implicit
 gsutil -m rsync -r gs://mdgen-public/4AA_sims data/4AA_sims
 gsutil -m rsync -r gs://mdgen-public/4AA_sims_implicit data/4AA_sims_implicit
 ```
-**Update: we are temporarily unable to publicly host the MD dataset. Please contact us for access.**
-
+**Update: we are unable to host the MD dataset due to its large size and data egress costs.**
 
 2. Download the ATLAS simulations via https://github.com/bjing2016/alphaflow/blob/master/scripts/download_atlas.sh to `data/atlas_sims`.
 3. Preprocess the tetrapeptide simulations
