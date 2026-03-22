@@ -20,13 +20,7 @@ pip install matplotlib==3.7.2 numpy==1.21.2
 
 ## Datasets
 
-1. Download the tetrapeptide MD datasets:
-```
-mkdir -p data/4AA_sims data/4AA_sims_implicit
-gsutil -m rsync -r gs://mdgen-public/4AA_sims data/4AA_sims
-gsutil -m rsync -r gs://mdgen-public/4AA_sims_implicit data/4AA_sims_implicit
-```
-**Update: we are unable to host the MD dataset due to its large size and data egress costs.**
+1. The tetrapeptide MD datasets (explicit and implicit solvent) are available on HuggingFace: https://huggingface.co/datasets/bjing-mit/tetrapeptide-sims
 
 2. Download the ATLAS simulations via https://github.com/bjing2016/alphaflow/blob/master/scripts/download_atlas.sh to `data/atlas_sims`.
 3. Preprocess the tetrapeptide simulations
@@ -68,14 +62,7 @@ python train.py --sim_condition --train_split splits/atlas_train.csv --val_split
 
 ## Model weights
 
-The model weights used in the paper may be downloaded here:
-```
-wget https://storage.googleapis.com/mdgen-public/weights/forward_sim.ckpt
-wget https://storage.googleapis.com/mdgen-public/weights/interpolation.ckpt
-wget https://storage.googleapis.com/mdgen-public/weights/upsampling.ckpt
-wget https://storage.googleapis.com/mdgen-public/weights/inpainting.ckpt
-wget https://storage.googleapis.com/mdgen-public/weights/atlas.ckpt
-```
+The model weights used in the paper are available on HuggingFace: https://huggingface.co/bjing-mit/mdgen
 
 ## Inference
 
